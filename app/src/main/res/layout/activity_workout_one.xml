@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="58dp"
+    android:weightSum="10"
+    tools:context=".WorkoutOne.WorkoutOneActivity">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:scaleType="fitCenter"
+        android:src="@drawable/add"
+        app:riv_border_color="#333333"
+        app:riv_border_width="2dip"
+        app:riv_corner_radius="30dip"
+        app:riv_mutate_background="true"
+        app:riv_oval="true"
+        android:onClick="onClick"
+        app:riv_tile_mode="clamp" />
+
+    <sematech.training.custom_views.MyEditText
+        android:id="@+id/fullName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:drawablePadding="7dp"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:hint="Full Name"
+        android:singleLine="true" />
+
+    <sematech.training.custom_views.MyEditText
+        android:id="@+id/emailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:drawablePadding="7dp"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:hint="john@gmail.com"
+        android:inputType="textEmailAddress"
+        android:singleLine="true" />
+
+    <sematech.training.custom_views.MyEditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:drawablePadding="7dp"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/ic_phone_iphone_black_24dp"
+        android:hint="Phone Number"
+        android:inputType="number"
+        android:singleLine="true" />
+
+    <sematech.training.custom_views.MyEditText
+        android:id="@+id/age"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:maxLength="2"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/ic_age"
+        android:drawablePadding="7dp"
+        android:hint="Age"
+        android:inputType="number"
+        android:singleLine="true" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioMen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="onRadioButtonClicked"
+            android:text="Men" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="onRadioButtonClicked"
+            android:text="Female" />
+    </RadioGroup>
+
+    <sematech.training.custom_views.MyButton
+        android:id="@+id/registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Register" />
+
+
+</LinearLayout>
