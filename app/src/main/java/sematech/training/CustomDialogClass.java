@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 
 import com.makeramen.roundedimageview.RoundedImageView;
 
+import sematech.training.WorkoutOne.WorkoutOneActivity;
 import sematech.training.utils.BaseActivity;
 import sematech.training.utils.BaseApplication;
 import sematech.training.utils.Publics;

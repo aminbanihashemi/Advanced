@@ -15,6 +15,7 @@ import sematech.training.custom_views.MyImageView;
 import sematech.training.custom_views.MyTextView;
 import sematech.training.utils.BaseActivity;
 import sematech.training.utils.BaseApplication;
+import sematech.training.utils.Publics;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
     MyButton workoutOne,workoutTwo,workoutThree,workoutFour,workoutFive,workoutSix,workoutSeven,workoutEight;
