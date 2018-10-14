@@ -2,22 +2,40 @@ package sematech.training.Models;
 
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 
-public class User {
-    private String fullname;
-    private String email;
-    private String number;
-    private int age;
-    private boolean gender;
-    private Drawable img;
+import com.orm.SugarRecord;
+
+public class User extends SugarRecord {
+    private int id;
+    String fullname;
+    String edition;
+    String email;
+    String number;
+    int age;
+    boolean gender;
+    Drawable img;
+
+    public User() {
+    }
 
     public User(String fullname, String email, String number, int age, boolean gender, Drawable img) {
         this.fullname = fullname;
+        this.edition = edition;
         this.email = email;
         this.number = number;
         this.age = age;
         this.gender = gender;
         this.img = img;
+    }
+
+    public String getEdition() {
+        return edition;
+    }
+
+    public void setEdition(String edition) {
+        this.edition = edition;
     }
 
     public String getFullname() {

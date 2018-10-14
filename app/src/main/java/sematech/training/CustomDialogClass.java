@@ -6,22 +6,12 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.makeramen.roundedimageview.RoundedImageView;
-
-import sematech.training.WorkoutOne.WorkoutOneActivity;
-import sematech.training.utils.BaseActivity;
-import sematech.training.utils.BaseApplication;
-import sematech.training.utils.Publics;
 
 import static sematech.training.WorkoutOne.WorkoutOneActivity.PICK_IMAGE;
 
@@ -31,7 +21,8 @@ public class CustomDialogClass extends Dialog implements View.OnClickListener  {
     public RoundedImageView cameraBtn, galleryBtn;
     Intent takePictureIntent;
     LinearLayout mLinearLayout;
-    static final int REQUEST_IMAGE_CAPTURE = 1;
+    private static final int MY_CAMERA_PERMISSION_CODE = 100;
+    private static final int CAMERA_REQUEST = 1888;
 
     public CustomDialogClass(Activity a) {
         super(a);
@@ -78,10 +69,14 @@ public class CustomDialogClass extends Dialog implements View.OnClickListener  {
     }
 
     private void CameraMethod() {
-
-        if (ContextCompat.checkSelfPermission(BaseApplication.baseApp, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(mActivity, new String[] { Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE }, 0);
-        }
+//
+//        if (checkSelfPermission(Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED) {
+//            requestPermissions(new String[]{Manifest.permission.CAMERA},
+//                    MY_CAMERA_PERMISSION_CODE);
+//        } else {
+//            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+//            mActivity.startActivityForResult(cameraIntent, CAMERA_REQUEST);
+//        }
     }
 
     private void GalleyMethod() {
