@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "665952542714",
+    "firebase_url": "https://advance-sematech.firebaseio.com",
+    "project_id": "advance-sematech",
+    "storage_bucket": "advance-sematech.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:665952542714:android:ce314108b45fbd02",
+        "android_client_info": {
+          "package_name": "sematech.training"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "665952542714-bsgeg84peikcqbl8pjuq36ofq6hdcf5j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sematech.training",
+            "certificate_hash": "8e8c7283021fc34fdf77efbc593e709f6f2685ce"
+          }
+        },
+        {
+          "client_id": "665952542714-q7san5bu7sqgg1me6215t8lfde06u1m6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWOZ3kzIqI3c5iiox7hClwcBymmOscTZU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "665952542714-q7san5bu7sqgg1me6215t8lfde06u1m6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

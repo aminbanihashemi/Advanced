@@ -8,7 +8,6 @@ import android.annotation.TargetApi;
 import com.orm.SugarRecord;
 
 public class User extends SugarRecord {
-    private int id;
     String fullname;
     String edition;
     String email;
@@ -84,5 +83,18 @@ public class User extends SugarRecord {
 
     public void setImg(Drawable img) {
         this.img = img;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "fullname='" + fullname + '\'' +
+                ", edition='" + edition + '\'' +
+                ", email='" + email + '\'' +
+                ", number='" + number + '\'' +
+                ", age=" + age +
+                ", gender=" + gender +
+                ", img=" + img +
+                '}';
     }
 }

@@ -5,18 +5,10 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:padding="12dp"
+    android:background="#c8d6e5"
     android:gravity="center"
     tools:context=".WorkoutOne.ShowUsersActivity">
 
-    <EditText
-        android:paddingBottom="12dp"
-        android:id="@+id/show_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
-    <EditText
-        android:id="@+id/show_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Drafts.kotlin.KotlinActivity">
+
+    <sematech.training.custom_views.MyButton
+        android:layout_width="300dp"
+        android:text="Save"
+        android:id="@+id/save"
+        android:layout_height="wrap_content" />
+
+    <sematech.training.custom_views.MyEditText
+        android:layout_width="match_parent"
+        android:text="Hello"
+        android:id="@+id/txt"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

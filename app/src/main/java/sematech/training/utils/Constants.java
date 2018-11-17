@@ -1,4 +1,4 @@
-package sematech.training;
+package sematech.training.utils;
 
 public class Constants {
 

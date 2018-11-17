@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import sematech.training.WorkoutOne.WorkoutOneActivity;
+import sematech.training.WorkoutTwo.MapsActivity;
 import sematech.training.custom_views.MyButton;
 import sematech.training.custom_views.MyImageView;
 import sematech.training.custom_views.MyTextView;
@@ -19,11 +20,18 @@ import sematech.training.utils.Publics;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
     MyButton workoutOne,workoutTwo,workoutThree,workoutFour,workoutFive,workoutSix,workoutSeven,workoutEight;
-    MyButton menuBtn;
+    MyTextView userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent i = getIntent();
+        String email = i.getStringExtra("Email");
+        userName.setText(email);
+
+
+
 //        ((MyImageView)findViewById(R.id.img)).load("http://live.irib.ir/assets/images/conductor-icon.png");
         bind();
         workoutOne.setOnClickListener(this);
@@ -34,12 +42,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         workoutSix.setOnClickListener(this);
         workoutSeven.setOnClickListener(this);
         workoutEight.setOnClickListener(this);
-        menuBtn.setOnClickListener(this);
 
     }
 
     private void bind() {
-
+        userName = findViewById(R.id.userName);
         workoutOne=findViewById(R.id.workoutOne);
         workoutTwo=findViewById(R.id.workoutTwo);
         workoutThree=findViewById(R.id.workoutThree);
@@ -48,7 +55,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         workoutSix=findViewById(R.id.workoutSix);
         workoutSeven=findViewById(R.id.workoutSeven);
         workoutEight=findViewById(R.id.workoutEight);
-        menuBtn=findViewById(R.id.menuBtn);
 
     }
 
@@ -58,7 +64,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if(v.getId()==R.id.workoutOne){
             workoutOneMethod();
         }else if (v.getId()==R.id.workoutTwo){
-
+            workoutTwoMethod();
         }else if (v.getId()==R.id.workoutThree){
 
         }else if (v.getId()==R.id.workoutFour){
@@ -71,14 +77,17 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         }else if (v.getId()==R.id.workoutEight){
 
-        }else if (v.getId()==R.id.menuBtn){
-
         }
 
     }
 
     private void workoutOneMethod() {
         Intent intent = new Intent(MainActivity.this, WorkoutOneActivity.class);
+        intent.putExtra("message", "12345");
+        startActivity(intent);
+    }
+    private void workoutTwoMethod() {
+        Intent intent = new Intent(MainActivity.this, MapsActivity.class);
         intent.putExtra("message", "12345");
         startActivity(intent);
     }

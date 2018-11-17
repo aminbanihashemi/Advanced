@@ -3,12 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="sematech.training">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name="com.orm.SugarApp"
@@ -19,30 +26,82 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".WorkoutOne.WorkoutOneActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".WorkoutOne.ShowUsersActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
+        <meta-data
+            android:name="DATABASE"
+            android:value="sugar_user_database.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="sematech.training" />
+
+        <activity android:name=".Drafts.DraftActivity" />
+
+        <receiver android:name=".receiver.TestReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Drafts.recycler.RecyclerActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name=".Drafts.kotlin.KotlinActivity" />
+        <activity android:name=".Drafts.sugar.SugarSampleActivity" />
+        <activity android:name=".Drafts.sugar.SugarJavaActivity" />
+        <!--
+         The API key for Google Maps-based APIs is defined as a string resource.
+         (See the file "res/values/google_maps_api.xml").
+         Note that the API key is linked to the encryption key used to sign the APK.
+         You need a different API key for each encryption key, including the release key that is used to
+         sign the APK for publishing.
+         You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Drafts.moves.GoogleMapsActivity"
+            android:label="@string/title_activity_google_maps" />
+        <activity
+            android:name=".WorkoutTwo.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".Drafts.mvpA.MVPActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Authentication.AuthActivity">
 
+        </activity>
+        <activity android:name=".Authentication.RegstrationActivity" />
+        <activity android:name=".Authentication.LoginActivity" />
         <activity
-            android:name=".WorkoutOne.WorkoutOneActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+            android:name=".Authentication.ProfileActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
-        <activity
-            android:name=".WorkoutOne.ShowUsersActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
-
-        <meta-data android:name="DATABASE" android:value="sugar_user_database.db" />
-        <meta-data android:name="VERSION" android:value="2" />
-        <meta-data android:name="QUERY_LOG" android:value="true" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="sematech.training" />
-
+        </activity>
     </application>
 
 </manifest>
