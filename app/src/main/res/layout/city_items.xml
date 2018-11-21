@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:padding="6dp">
+
+    <sematech.training.custom_views.MyImageView
+        android:id="@+id/imgCity"
+        android:layout_width="98dp"
+        android:layout_height="98dp" />
+
+    <LinearLayout
+        android:paddingLeft="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_height="19dp"
+                android:layout_width="20dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/roundedImg"
+                android:scaleType="fitCenter"
+                app:riv_corner_radius="30dip"
+                app:riv_border_width="1dip"
+                app:riv_border_color="#333333"
+                app:riv_mutate_background="true"
+                app:riv_tile_mode="repeat"
+                app:riv_oval="true" />
+
+
+            <sematech.training.custom_views.MyTextView
+                android:paddingRight="6dp"
+                android:id="@+id/nameCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country: "
+                android:textSize="8sp" />
+
+            <sematech.training.custom_views.MyTextView
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Currency: "
+                android:textSize="8sp" />
+
+            <sematech.training.custom_views.MyTextView
+                android:id="@+id/currency"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Language: "
+                android:textSize="8sp" />
+
+            <sematech.training.custom_views.MyTextView
+                android:id="@+id/language"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Population: "
+                android:textSize="8sp" />
+
+            <sematech.training.custom_views.MyTextView
+                android:id="@+id/population"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

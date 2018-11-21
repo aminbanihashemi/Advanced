@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="12dp"
+    android:layout_height="100dp">
+
+    <sematech.training.custom_views.MyImageView
+        android:src="@drawable/ic_launcher"
+        android:id="@+id/img_recycler_items"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="76dp" />
+
+    <sematech.training.custom_views.MyTextView
+        android:text="Book name"
+        android:id="@+id/name_recycler_items"
+        android:layout_marginLeft="100dp"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <sematech.training.custom_views.MyButton
+        android:id="@+id/remove"
+        android:gravity="center"
+        android:background="@drawable/ic_close_black_24dp"
+        android:layout_marginLeft="300dp"
+        android:layout_centerVertical="true"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+
+</RelativeLayout>

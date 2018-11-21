@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="6dp"
+    android:layout_height="110dp">
+
+    <sematech.training.custom_views.MyImageView
+        android:id="@+id/imgCar"
+        android:layout_width="98dp"
+        android:layout_height="98dp" />
+
+    <LinearLayout
+        android:padding="6dp"
+        android:orientation="vertical"
+        android:gravity="center|left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <sematech.training.custom_views.MyTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <sematech.training.custom_views.MyTextView
+            android:id="@+id/tvCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <sematech.training.custom_views.MyTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
