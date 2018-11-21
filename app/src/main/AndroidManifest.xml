@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="sematech.training">
 
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -28,9 +30,7 @@
         tools:replace="android:icon">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".WorkoutOne.WorkoutOneActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
@@ -85,22 +85,23 @@
             android:label="@string/title_activity_maps" />
         <activity
             android:name=".Drafts.mvpA.MVPActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name=".Authentication.AuthActivity" />
+        <activity android:name=".Authentication.RegstrationActivity" />
+        <activity android:name=".Authentication.LoginActivity" />
+        <activity
+            android:name=".Authentication.ProfileActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name=".Drafts.mvpB.MVPBActivity"></activity>
+        <activity android:name=".CarsMVP.CarsActivity">
+
+        </activity>
+        <activity android:name=".Drafts.mvpCity.MVPCityActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".Authentication.AuthActivity">
-
-        </activity>
-        <activity android:name=".Authentication.RegstrationActivity" />
-        <activity android:name=".Authentication.LoginActivity" />
-        <activity
-            android:name=".Authentication.ProfileActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-
         </activity>
     </application>
 
