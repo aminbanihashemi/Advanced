@@ -92,17 +92,16 @@
         <activity
             android:name=".Authentication.ProfileActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity android:name=".Drafts.mvpB.MVPBActivity"></activity>
-        <activity android:name=".CarsMVP.CarsActivity">
-
-        </activity>
+        <activity android:name=".Drafts.mvpB.MVPBActivity" />
+        <activity android:name=".CarsMVP.CarsActivity" />
         <activity android:name=".Drafts.mvpCity.MVPCityActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+        <activity android:name=".Drafts.RealmMVP.StudentRealmActivity"><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
     </application>
 
 </manifest>
